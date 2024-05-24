@@ -1,0 +1,36 @@
+#content {
+  max-width: 1200px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.firstHeading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.wikitable.card {
+  border-collapse: collapse;
+  width: 350px;
+  float: right;
+  margin: 0 0 20px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.teacher_photo{
+  width: 330px;
+}
+.wikitable.card th,
+.wikitable.card td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.wikitable.card th {
+  background-color: #f2f2f2;
+}
+
+p {
+  line-height: 1.6;
+}
+

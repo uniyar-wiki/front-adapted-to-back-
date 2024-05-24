@@ -1,0 +1,131 @@
+/* Общий фон и центрирование контейнера */
+.user-profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+}
+
+/* Стили для контейнера профиля */
+.profile-container,
+.edit-profile-container {
+    background-color: #444;
+    color: #fff;
+    padding: 50px; /* Увеличенный padding */
+    border-radius: 25px;
+    width: 100%;
+    max-width: 1000px; /* Увеличенный max-width */
+    margin: 50px;
+}
+
+.profile-avatar,
+.edit-avatar-img {
+    width: 250px; /* Увеличенный размер аватара */
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 50px;
+}
+
+.profile-info,
+.edit-info {
+    width: 100%;
+}
+
+.profile-info p,
+.edit-info p {
+    margin: 12.5px 0; /* Увеличенные отступы */
+    font-size: 35px; /* Увеличенный размер шрифта */
+}
+
+/* Стили для рычажка с текстом */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 350px; /* Увеличенная ширина рычажка */
+    height: 85px; /* Увеличенная высота */
+    margin: 25px;
+    border-radius: 42.5px;
+    background-color: #ccc;
+    transition: background-color 0.4s;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    transition: 0.4s;
+}
+
+.slider-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    line-height: 85px; /* Увеличенная высота строки */
+    color: black;
+    font-size: 35px; /* Увеличенный размер шрифта */
+    user-select: none;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 65px; /* Увеличенный размер овальчика */
+    width: 65px;
+    left: 10px;
+    bottom: 10px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider:before {
+    transform: translateX(265px); /* Скорректированное смещение */
+    background-color: #bbb;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 480px) {
+    .profile-container,
+    .edit-profile-container {
+        width: 90%;
+        margin: 25px;
+        padding: 25px; /* Адаптивный padding */
+    }
+
+    .profile-avatar,
+    .edit-avatar-img {
+        width: 200px; /* Адаптивный размер аватара */
+        height: 200px;
+        margin-bottom: 25px;
+    }
+
+    .profile-info p,
+    .edit-info p {
+        font-size: 28px; /* Адаптивный размер шрифта */
+    }
+
+    .toggle-switch {
+        width: 280px; /* Адаптивная ширина рычажка */
+        height: 68px; /* Адаптивная высота */
+    }
+
+    .slider-text {
+        line-height: 68px; /* Адаптивная высота строки */
+        font-size: 28px; /* Адаптивный размер шрифта */
+    }
+
+    .slider:before {
+        height: 52px; /* Адаптивный размер овальчика */
+        width: 52px;
+        transform: translateX(212px); /* Адаптивное смещение */
+    }
+}
