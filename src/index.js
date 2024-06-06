@@ -10,6 +10,7 @@ import RainbowText from './main.js'
 import reportWebVitals from './reportWebVitals';
 import LoginPage from './login/LoginPage';
 import Header from './Header';
+import Chat from './chat/Chat.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -28,6 +29,7 @@ root.render(
         <Route path="/profile" element={<UserProfile />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>
+      <Chat />
     </BrowserRouter>
   </React.StrictMode>
 );
